@@ -2763,7 +2763,7 @@ long tty_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 		return tty_tiocsserial(tty, p);
 	case TIOCGSERIAL:
 		return tty_tiocgserial(tty, p);
-	case TIOCGPTPEER:
+	/* case TIOCGPTPEER: */
 		/* Special because the struct file is needed */
 		return ptm_open_peer(file, tty, (int)arg);
 	default:
